@@ -1,0 +1,64 @@
+<!--
+  ~ Copyright (c) 2020 Dimitrijs Fedotovs
+  ~ This code is licensed under MIT license
+  ~ (see LICENSE.txt for details)
+  -->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="/templates/main.xhtml">
+    <ui:define name="content">
+
+
+        <h:dataTable value="#{booksBean.books}" var="book">
+            <h:column>
+                <f:facet name="header">id</f:facet>
+                #{book.id}
+            </h:column>
+            <h:column>
+                <f:facet name="header">title</f:facet>
+                #{book.title}
+            </h:column>
+            <h:column>
+                <f:facet name="header">isbn</f:facet>
+                #{book.isbn}
+            </h:column>
+            <h:column>
+                <f:facet name="header">author</f:facet>
+                #{book.author}
+            </h:column>
+            <h:column>
+                <f:facet name="header">year</f:facet>
+                #{book.year}
+            </h:column>
+            <h:column>
+                <f:facet name="header">publisher</f:facet>
+                #{book.publisher}
+            </h:column>
+            <h:column>
+                <f:facet name="header">description</f:facet>
+                #{book.description}
+            </h:column>
+            <h:column>
+                <f:facet name="header">language</f:facet>
+                #{book.language}
+            </h:column>
+            <h:column>
+                <f:facet name="header">genre</f:facet>
+                #{book.genre}
+            </h:column>
+            <h:column>
+                <f:facet name="header">popularity</f:facet>
+                #{book.popularity}
+            </h:column>
+
+</h:dataTable>
+
+
+        </ui:define>
+        </ui:composition>
+
+        </html>
